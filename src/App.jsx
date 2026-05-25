@@ -8,14 +8,45 @@ import Footer_Component from './components/Footer_Component'
 import PropsComponents from './components/PropsComponents'
 
 function App() {
+  
+  //Spread Operator with Arrays
   const number=[1,2,3]
   const newNumbers=[...number,4,5,6,7]
   console.log(newNumbers)
 
+  //Merging two arrays using spread operator
   const fruits=["apple","banana","grapes"]
   const moreFruits=["orange","pineapple","mango"]
   const allFruits=[...fruits,...moreFruits]
   console.log(allFruits)
+
+  //Spread operator with Objects
+  const person={
+    name:"john",
+    age:21,
+    city:"surat"
+  }
+  const newPerson={
+    ...person,
+    country:"india",
+    profession:"developer"
+  }
+  console.log(newPerson)
+
+  //Spread operator with functions
+  const numbers=[1,2,3,4,5]
+  const sum=(a,b,c,d,e)=>{
+    return a+b+c+d+e
+  }
+  const result=sum(...numbers)
+  console.log(result)
+
+  //Spread operator with Rest parameters
+  const multiply=(...args)=>{
+    return args.reduce((acc,curr)=>acc*curr,1)
+  }
+  const result2=multiply(1,2,3,4,5)
+  console.log(result2)
 
   return (
     <>
