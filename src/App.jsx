@@ -8,7 +8,14 @@ import Footer_Component from './components/Footer_Component'
 import PropsComponents from './components/PropsComponents'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const number=[1,2,3]
+  const newNumbers=[...number,4,5,6]
+  console.log(newNumbers)
+
+  const fruits=["apple","banana","grapes"]
+  const moreFruits=["orange","pineapple","mango"]
+  const allFruits=[...fruits,...moreFruits]
+  console.log(allFruits)
 
   return (
     <>

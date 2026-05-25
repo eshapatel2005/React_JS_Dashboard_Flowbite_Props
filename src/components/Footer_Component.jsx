@@ -14,7 +14,7 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-
 function Footer_Component() {
   return (
     <>
-        <Footer className="rounded-none"  style={{marginTop:'0px'}} container>
+        <Footer className="rounded-none"  style={{marginTop:'1px'}} container>
       <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
           <div>
