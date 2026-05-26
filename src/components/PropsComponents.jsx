@@ -1,8 +1,7 @@
 import React from 'react'
 import { Card } from "flowbite-react";
 import { Sidebar, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
-
+import { HiArrowSmRight, HiChartPie, HiIdentification, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 
 function PropsComponents({title,description,image}) {
   return (
@@ -44,11 +43,6 @@ function PropsComponents({title,description,image}) {
         </th>
       </tr>
     </table>
-    
-
-
-      
-
     </>
   )
 }
