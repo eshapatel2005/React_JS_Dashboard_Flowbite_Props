@@ -3,9 +3,11 @@ import {useState} from 'react'
 
 function State_Component() {
     
+    //useState with boolean
+    const [isOpen, setIsOpen] = useState(false); 
+
     //useState with counter
-    {
-    {/*const [count,setCount]=useState(0)
+    const [count,setCount]=useState(0)
     
     //useState with user object
     const [user,setUser]=useState({
@@ -21,7 +23,7 @@ function State_Component() {
             city:"mumbai"
         })
     }
-    console.log(user)*/}
+    console.log(user)
 
     //useState with array of objects
     const [todos,setTodos]=useState([
@@ -35,11 +37,11 @@ function State_Component() {
     console.log(todos)  
 
     //useState with form input
-    {/*const [name,setName]=useState("");
+    const [name,setName]=useState("");
     const handleNameChange=(e)=>{
         setName(e.target.value)
     }
-    console.log(name)*/}
+    console.log(name)
 
   return (
     <>
@@ -47,6 +49,9 @@ function State_Component() {
     
     <button className="btn1" onClick={()=>setCount(count+1)}>Increase</button>
     <h1>Count : {count}</h1>
+
+    <button className="btn1" onClick={() => setIsOpen(!isOpen)}>   {isOpen ? "Close" : "Open"} </button> 
+    <h1>{isOpen}</h1>
     </>
   )
 }

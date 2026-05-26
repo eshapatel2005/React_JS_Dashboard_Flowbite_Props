@@ -7,6 +7,7 @@ function PropsComponents({title,description,image}) {
   return (
     <>
     <table>
+      <tbody>
       <tr>
         <th>
           <Sidebar className='side1' aria-label="Default sidebar example">
@@ -42,6 +43,7 @@ function PropsComponents({title,description,image}) {
           </Card>
         </th>
       </tr>
+      </tbody>
     </table>
     </>
   )
