@@ -2,7 +2,10 @@ import React from 'react'
 import {useState} from 'react'
 
 function State_Component() {
-    
+
+    //useState for show/hide password
+    const [show, setShow] = useState(false); 
+
     //useState with boolean
     const [isOpen, setIsOpen] = useState(false); 
 
@@ -52,6 +55,10 @@ function State_Component() {
 
     <button className="btn1" onClick={() => setIsOpen(!isOpen)}>   {isOpen ? "Close" : "Open"} </button> 
     <h1>{isOpen}</h1>
+
+    <input type={show ? "text" : "password"} />       
+    <button className="btn2" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"} Password</button> 
+    
     </>
   )
 }
