@@ -6,6 +6,7 @@ import './App.css'
 import Header from './components/Header'
 import Footer_Component from './components/Footer_Component'
 import PropsComponents from './components/PropsComponents'
+import State_Component from './components/State_Component'
 
 function App() {
   
@@ -48,9 +49,10 @@ function App() {
   const result2=multiply(1,2,3,4,5)
   console.log(result2)
 
-
   return (
     <>
+      <State_Component/>
+      <br></br>
       <Header/>
       <br></br>
       <PropsComponents  
