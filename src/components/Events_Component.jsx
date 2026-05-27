@@ -1,6 +1,8 @@
 import React from 'react'
 
 function Event_Component() {
+    
+    //Event handling with function
     function handleClick(){
         alert("Hello, you clicked the button!")
     }
@@ -8,6 +10,7 @@ function Event_Component() {
     <>
         <div>events_component</div>
         <button className="btn1" onClick={handleClick}>Click Me</button>
+        <button className="btn1" onClick={()=>alert("esha")}>CLICK</button>
     </>
   )
 }
