@@ -3,11 +3,14 @@ import {useState} from 'react'
 
 function State_Component() {
 
+    //useState with string
+    const [text, setText] = useState(" ")
+
     //useState for show/hide password
-    const [show, setShow] = useState(false); 
+    const [show, setShow] = useState(false)
 
     //useState with boolean
-    const [isOpen, setIsOpen] = useState(false); 
+    const [isOpen, setIsOpen] = useState(false)
 
     //useState with counter
     const [count,setCount]=useState(0)
@@ -49,16 +52,27 @@ function State_Component() {
   return (
     <>
     <div>State_Component</div>
-    
-    <button className="btn1" onClick={()=>setCount(count+1)}>Increase</button>
-    <h1>Count : {count}</h1>
 
+    {/* //useState with string */}
+    <input type="text" placeholder="Type something..." value={text} onChange={(e) => setText(e.target.value)}/>
+    <h2>You Typed: {text}</h2>
+    <br></br>
+    {/* //useState with counter */} 
+    <h1>Count : {count}</h1>
+    <button className="btn1" onClick={()=>setCount(count+1)}>Increase</button>
+    <button className="btn1" onClick={()=>setCount(count-1)}>Decrease</button>
+    <button className="btn1" onClick={()=>setCount(0)}>Reset</button>
+    <br></br>
+    <br></br>
+
+    {/* useState with boolean */}
     <button className="btn1" onClick={() => setIsOpen(!isOpen)}>   {isOpen ? "Close" : "Open"} </button> 
     <h1>{isOpen}</h1>
 
+    {/* useState for show/hide password */}
     <input type={show ? "text" : "password"} />       
-    <button className="btn2" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"} Password</button> 
-    
+    <button className="btn2" onClick={() => setShow(!show)}>{show ? "Hide" : "Show"} Password</button> <br></br>
+
     </>
   )
 }

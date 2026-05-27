@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Footer_Component from './components/Footer_Component'
 import PropsComponents from './components/PropsComponents'
 import State_Component from './components/State_Component'
+import Event_Component from './components/events_component'
 
 function App() {
   
@@ -51,6 +52,8 @@ function App() {
 
   return (
     <>
+      <Event_Component/>
+      <br></br>
       <State_Component/>
       <br></br>
       <Header/>
