@@ -20,6 +20,9 @@ function Event_Component() {
 
     //Toggle Light/Dark Mode
     const [mode,setMode]=useState("light");
+
+    //color hover event
+    const [color,setColor]=useState("blue");
         
   return (
     <>
@@ -39,6 +42,9 @@ function Event_Component() {
 
         {/* Toggle Light/Dark Mode */}
         <button className='btn2' onClick={()=>setMode(mode==="light"?"dark":"light")}>Toggle Mode:{mode}</button>
+
+        {/* Color hover event */}
+        <div style={{width: "100px", height: "100px",backgroundColor:color,marginTop: "20px",border: "2px solid black"}} onMouseEnter={()=>setColor("red")} onMouseLeave={()=>setColor("pink")}></div>
     </>
   )
 }
