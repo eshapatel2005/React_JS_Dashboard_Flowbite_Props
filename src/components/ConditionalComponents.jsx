@@ -24,22 +24,44 @@ function ConditionalComponents() {
     // Logical OR operator
     const userName = "";
 
+    // Switch case
+    const status = "pending";
+    let statusMessage;
+    switch(status)
+    {
+      case "active":
+        statusMessage = <p>Status: Active</p>;
+        break;
+      
+      case "inactive":
+        statusMessage = <p>Status: Inactive</p>;
+        break;  
+      
+      case "pending":
+        statusMessage = <p>Status: Pending</p>;
+        break;
+
+      default:
+        statusMessage = <p>Status: Unknown</p>;
+    }
+
     return (
       <>
-        <div>
-          {/* ternary operator */}
-          {isLoggedIn ? <h2>Welcome!</h2> : <h2>Login First</h2>}
+        {/* ternary operator */}
+        {isLoggedIn ? <h2>Welcome!</h2> : <h2>Login First</h2>}
 
-          {/* if else */}
-          {message}
+        {/* if else */}
+        {message}
 
-          {/* Logical AND operator */}
-          {isLoading && <p>Loading...</p>}
+        {/* Logical AND operator */}
+        {isLoading && <p>Loading...</p>}
 
-          {/* Logical OR operator */}
-          <h1>Hello {userName || "Guest"}</h1>
+        {/* Logical OR operator */}
+        <h1>Hello {userName || "Guest"}</h1>
 
-        </div>
+        {/* Switch case */}
+        {statusMessage}
+
       </>
 
     )
