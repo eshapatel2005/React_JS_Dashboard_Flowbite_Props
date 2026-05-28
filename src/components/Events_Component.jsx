@@ -3,6 +3,11 @@ import {useState} from 'react'
 
 function Event_Component() {
     
+    //Event handling with form submission
+    const handleSubmit = (e) => {     
+        e.preventDefault();     alert("Form Submission Stopped");   
+    }
+
     //Event handling with function
     function handleClick(){
         alert("Hello, you clicked the button!")
@@ -28,6 +33,11 @@ function Event_Component() {
     <>
         <div>events_component</div>
 
+        {/* Event handling with form submission */}
+        <form onSubmit={handleSubmit}>
+            <button className="btn2" type="submit">Submit</button>     
+        </form> 
+
         {/* Event handling with function */}
         <button className="btn1" onMouseOver={handleClick}>Click Me</button>
 
@@ -44,7 +54,7 @@ function Event_Component() {
         <button className='btn2' onClick={()=>setMode(mode==="light"?"dark":"light")}>Toggle Mode:{mode}</button>
 
         {/* Color hover event */}
-        <div style={{width: "100px", height: "100px",backgroundColor:color,marginTop: "20px",border: "2px solid black"}} onMouseEnter={()=>setColor("red")} onMouseLeave={()=>setColor("pink")}></div>
+        <div className="color-box" onMouseEnter={()=>setColor("red")} onMouseLeave={()=>setColor("pink")}></div>
     </>
   )
 }

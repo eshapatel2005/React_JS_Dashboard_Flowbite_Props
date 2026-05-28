@@ -28,18 +28,21 @@ function PropsComponents({title,description,image}) {
           <Card className="max-w-sm div1" imgSrc={image}>
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">{description}</p>
+            <button onClick={()=>alert("You clicked the button")} className="btn3">More Info  </button>
           </Card>
         </th>
         <th>
           <Card className="max-w-sm div1" imgSrc={image}>
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">{description}</p>
+            <button onClick={()=>alert("You clicked the button")} className="btn3">More Info</button>
           </Card>
         </th>
         <th>
           <Card className="max-w-sm div1" imgSrc={image}>
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
             <p className="font-normal text-gray-700 dark:text-gray-400">{description}</p>
+            <button onClick={()=>alert("You clicked the button")} className="btn3">More Info</button>
           </Card>
         </th>
       </tr>

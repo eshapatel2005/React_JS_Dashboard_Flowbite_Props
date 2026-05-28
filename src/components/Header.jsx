@@ -11,7 +11,7 @@ function Header() {
                 <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
             </NavbarBrand>
             <div className="flex md:order-2">
-                <Button>Get started</Button>
+                <Button onMouseOver={()=>alert("You hovered over the button")}>Get started</Button>
                 <NavbarToggle />
             </div>
             <NavbarCollapse>
