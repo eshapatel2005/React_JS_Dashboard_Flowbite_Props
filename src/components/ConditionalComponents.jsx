@@ -21,6 +21,8 @@ function ConditionalComponents() {
     // Logical AND operator
     const isLoading=true;
 
+    // Logical OR operator
+    const userName = "";
 
     return (
       <>
@@ -29,10 +31,13 @@ function ConditionalComponents() {
           {isLoggedIn ? <h2>Welcome!</h2> : <h2>Login First</h2>}
 
           {/* if else */}
-          <h1>{message}</h1>
+          {message}
 
           {/* Logical AND operator */}
           {isLoading && <p>Loading...</p>}
+
+          {/* Logical OR operator */}
+          <h1>Hello {userName || "Guest"}</h1>
 
         </div>
       </>
