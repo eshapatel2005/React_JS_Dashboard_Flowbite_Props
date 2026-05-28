@@ -8,7 +8,7 @@ function ConditionalComponents() {
     return isLoggedIn ? <div>Welcome!</div> : <div>Please log in.</div>
 
     //if-else statement
-    const user=true;
+    {/*const user=true;
     if(user)
     {
         return <div>Welcome, User!</div>
@@ -16,7 +16,7 @@ function ConditionalComponents() {
     else
     {
         return <div>Nope!! Log in first.</div>
-    }
+    }*/}
 
   return (
     <div>Conditional Components</div>
