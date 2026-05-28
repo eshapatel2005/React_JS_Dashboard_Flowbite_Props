@@ -1,11 +1,12 @@
 import React from 'react'
 import {useState} from 'react'
 
-function Event_Component() {
+function EventComponent() {
     
     //Event handling with form submission
     const handleSubmit = (e) => {     
-        e.preventDefault();     alert("Form Submission Stopped");   
+        e.preventDefault()  
+        alert("Form Submission Stopped")
     }
 
     //Event handling with function
@@ -32,7 +33,7 @@ function Event_Component() {
   return (
     <>
         <div>events_component</div>
-
+    
         {/* Event handling with form submission */}
         <form onSubmit={handleSubmit}>
             <button className="btn2" type="submit">Submit</button>     
@@ -54,9 +55,9 @@ function Event_Component() {
         <button className='btn2' onClick={()=>setMode(mode==="light"?"dark":"light")}>Toggle Mode:{mode}</button>
 
         {/* Color hover event */}
-        <div className="color-box" onMouseEnter={()=>setColor("red")} onMouseLeave={()=>setColor("pink")}></div>
+        <div style={{backgroundColor: color,width: "100px",height: "100px",border: "2px solid black",marginTop: "20px"}} onMouseEnter={()=>setColor("green")} onMouseLeave={()=>setColor("gray")}></div>
     </>
   )
 }
 
-export default Event_Component
+export default EventComponent
