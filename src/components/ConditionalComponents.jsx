@@ -3,25 +3,41 @@ import {useState} from 'react'
 
 function ConditionalComponents() {
 
-    // Conditional rendering using ternary operator
-    const isLoggedIn = true; 
-    return isLoggedIn ? <div>Welcome!</div> : <div>Please log in.</div>
+    // ternary
+    const isLoggedIn = true;
 
-    //if-else statement
-    {/*const user=true;
-    if(user)
+    // if else
+    let message;
+    const userLoggedIn = true;
+    if(userLoggedIn)
     {
-        return <div>Welcome, User!</div>
+      message = <h1>Welcome User!</h1>
     }
     else
     {
-        return <div>Nope!! Log in first.</div>
-    }*/}
+      message = <h1>Please Login First!</h1>
+    }
 
-  return (
-    <div>Conditional Components</div>
+    // Logical AND operator
+    const isLoading=true;
 
-  )
+
+    return (
+      <>
+        <div>
+          {/* ternary operator */}
+          {isLoggedIn ? <h2>Welcome!</h2> : <h2>Login First</h2>}
+
+          {/* if else */}
+          <h1>{message}</h1>
+
+          {/* Logical AND operator */}
+          {isLoading && <p>Loading...</p>}
+
+        </div>
+      </>
+
+    )
 }
 
 export default ConditionalComponents
