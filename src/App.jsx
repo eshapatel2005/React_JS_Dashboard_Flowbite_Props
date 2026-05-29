@@ -8,8 +8,8 @@ import Footer_Component from './components/Footer_Component'
 import PropsComponents from './components/PropsComponents'
 import State_Component from './components/State_Component'
 import EventComponent from './components/EventsComponent'
-import ConditionalComponent from './components/ConditionalComponents'
 import ConditionalComponents from './components/ConditionalComponents'
+import MapComponents from './components/MapComponents'
 
 function App() {
   
@@ -54,6 +54,8 @@ function App() {
 
   return (
     <>
+      <MapComponents/>
+      <br></br>
       <ConditionalComponents/>
       <br></br>
       <EventComponent/>
