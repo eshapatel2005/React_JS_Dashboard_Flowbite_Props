@@ -1,21 +1,22 @@
-import React from 'react'
+import React from "react";
 
 function MapComponents() {
 
-    //map function to render list of items 
-    const numbers=[1,2,3,4,5]
-    const listItems=numbers.map((number)=><li key={number}>{number}</li>)
-
-
+    // Mapping an array of objects to JSX elements
+    const numbers=[
+        {id:1,name:"Esha",age:21},
+        {id:2,name:"Avi",age:15}
+    ]
 
   return (
-    <div>
-      <h2>Map Components </h2>
-      <ul>
-        {listItems}
-      </ul>
-    </div>
-  )
+    <>
+      <div>
+        {numbers.map((user)=>(
+            <p key={user.id}>{user.name}-{user.age}</p>
+        ))}
+      </div>
+    </>
+  );
 }
 
-export default MapComponents
+export default MapComponents;
