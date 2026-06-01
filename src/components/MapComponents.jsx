@@ -15,7 +15,7 @@ function MapComponents() {
   ];
 
   // Mapping an array of objects with nested arrays to JSX elements
-  const data = [{ id: 1, name: "ESHA", hobbies: ["Singing", "Traveling"] }];
+  const data = [{ id: 1, name: "Esha", hobbies: ["Singing", "Traveling"] }];
 
   //Add new data to array uisng button click and display it using map
   const [users, setUsers] = useState(["Esha", "Raj"]);
@@ -39,7 +39,7 @@ function MapComponents() {
           <div
             key={item.id}
             style={{
-              border: "1px solid black",
+              border: "1px solid brown",
               padding: "10px",
               margin: "10px",
             }}
@@ -56,7 +56,8 @@ function MapComponents() {
         {data.map((user) => (
           <div key={user.id}>
             {" "}
-            <h2>{user.name}</h2>{" "}
+            <h2>{user.name}</h2>
+            {""}
             {user.hobbies.map((hobby, index) => (
               <li key={index}>{hobby}</li>
             ))}{" "}
@@ -67,7 +68,6 @@ function MapComponents() {
       {/* Add new data to array using button click and display it using map */}
       <div>
         <button onClick={addUser}>Add User</button>
-
         {users.map((user, index) => (
           <h2 key={index}>{user}</h2>
         ))}
