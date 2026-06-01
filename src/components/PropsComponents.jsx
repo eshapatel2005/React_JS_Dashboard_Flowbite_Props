@@ -3,6 +3,7 @@ import { Card } from "flowbite-react";
 import { Sidebar, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
 import { HiArrowSmRight, HiChartPie, HiIdentification, HiInbox, HiShoppingBag, HiTable, HiUser, HiViewBoards } from "react-icons/hi";
 
+
 function PropsComponents({title,description,image}) {
   return (
     <>
